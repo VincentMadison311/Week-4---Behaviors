@@ -27,12 +27,13 @@ public class MoveObject : MonoBehaviour
             FlipMoveDirection();
         }
 
-        //gameObject.transform.Translate(moveDirection * moveSpeed);
+        gameObject.transform.Translate(moveDirection * moveSpeed);
     }
 
     void FlipMoveDirection()
     {
         moveDirection = -moveDirection;
+        startingLocation = transform.position;
     }
 
     float GetDistanceTraveled()
